@@ -6,18 +6,12 @@ fun main() {
 
 
     }
-    fun part1(input: String): Int {
-        val data = parseInput(input)
-        return data.maxOf { it.sum() }
-    }
+    fun part1(input: String): Int = parseInput(input).maxOf { it.sum() }
 
-    fun part2(input: String): Int {
-        val data = parseInput(input)
-        return data.map { it.sum() }
-            .sortedDescending()
-            .take(3)
-            .sum()
-    }
+    fun part2(input: String): Int = parseInput(input).map { it.sum() }
+        .sortedDescending()
+        .take(3)
+        .sum()
 
     // test if implementation meets criteria from the description, like:
     val input = File("src/Day01.txt").readText()
